@@ -1,4 +1,4 @@
-package com.stackroute.PE5;
+package com.stackroute.pe5;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,20 +7,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.Assert.*;
-
 public class StringCountTest {
     StringCount stringCount;
     @Before
     public void setUp() throws Exception {
         stringCount=new StringCount();
     }
-
-
     @After
     public void tearDown() throws Exception {
         stringCount=null;
     }
-
     @Test
     public void matchStringSuccess() {
         Map <String,Integer> mapA = new HashMap<>();
@@ -31,6 +27,5 @@ public class StringCountTest {
         Map expectedValue=mapA;
         Map actualValue=stringCount.matchString(str);
         assertEquals(expectedValue,actualValue);
-
     }
 }

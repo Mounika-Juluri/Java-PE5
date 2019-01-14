@@ -1,4 +1,4 @@
-package com.stackroute.PE5;
+package com.stackroute.pe5;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,19 +7,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.Assert.*;
-
 public class ReplaceElementTest {
     ReplaceElement replaceElement;
     @Before
     public void setUp() throws Exception {
         replaceElement=new ReplaceElement();
     }
-
     @After
     public void tearDown() throws Exception {
         replaceElement=null;
     }
-
     @Test
     public void replaceSuccess() {
         ArrayList<String> strExpect=new ArrayList<>();
@@ -27,7 +24,6 @@ public class ReplaceElementTest {
         strExpect.add("Grape");
         strExpect.add("Mango");
         strExpect.add("Berry");
-
         ArrayList<String> strpass=new ArrayList<>();
         strpass.add("Apple");
         strpass.add("Grape");
@@ -38,6 +34,5 @@ public class ReplaceElementTest {
         ArrayList<String> expectedValue=strExpect;
         ArrayList<String> actualValue=replaceElement.replace(strpass,oldStr,newStr);
         assertArrayEquals(expectedValue.toArray(),actualValue.toArray());
-
     }
 }
